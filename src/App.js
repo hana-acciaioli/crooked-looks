@@ -1,14 +1,14 @@
 import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Auth from './components/Auth/Auth';
-import VideoBackground from './components/Home/VideoBackground.js';
+import Home from './components/Home/Home.js';
 
 function App() {
   return (
     <div className="App">
       {/* <Header /> */}
       <Switch>
-        <Route exact-path="/" component={VideoBackground} />
+        <Route exact-path="/" component={Home} />
         <Route path="/auth/:type" component={Auth} />
       </Switch>
     </div>

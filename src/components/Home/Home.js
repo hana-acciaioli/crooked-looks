@@ -1,7 +1,7 @@
 import React from 'react';
-import './VideoBackground.css';
+import './Home.css';
 
-export default function VideoBackground() {
+export default function Home() {
   //   const menuToggle = querySelector('.toggle');
   //   const showcase = querySelector('.showcase');
 
