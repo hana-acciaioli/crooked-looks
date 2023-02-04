@@ -1,11 +1,9 @@
 import React from 'react';
 import './Home.css';
-import NavBar from '../NavBar/NavBar.js';
 export default function Home() {
   return (
     <div>
       {' '}
-      <NavBar />
       <section className="showcase">
         <background-video
           src="CrookedLooksBurn1080FINAL.webmsd.webm"
