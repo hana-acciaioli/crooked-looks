@@ -38,11 +38,6 @@
   opacity: 0.8;
 }
 
-.text {
-  position: relative;
-  z-index: 10;
-}
-
 .text h2 {
   font-size: 5em;
   font-weight: 800;
