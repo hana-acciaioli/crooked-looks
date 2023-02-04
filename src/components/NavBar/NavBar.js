@@ -17,9 +17,20 @@ export default function NavBar() {
         </button>
       ) : (
         <button className="toggle" onClick={naveToggleHandler}>
-          <img src="assets/images/reject.png"></img>
+          <img src="assets/images/x-button.png"></img>
         </button>
       )}
+      <div className="full-nav">
+        <NavLink exact to="/">
+          Home
+        </NavLink>
+        <NavLink to="/watch">Watch</NavLink>
+        {/* <NavLink to="/listen">Listen</NavLink> */}
+        <NavLink to="/shows">Shows</NavLink>
+        {/* <NavLink to="/news">News</NavLink> */}
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </div>
 
       {navDisplay && (
         <div className="hidden-nav">
@@ -27,9 +38,9 @@ export default function NavBar() {
             Home
           </NavLink>
           <NavLink to="/watch">Watch</NavLink>
-          <NavLink to="/listen">Listen</NavLink>
+          {/* <NavLink to="/listen">Listen</NavLink> */}
           <NavLink to="/shows">Shows</NavLink>
-          <NavLink to="/news">News</NavLink>
+          {/* <NavLink to="/news">News</NavLink> */}
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </div>

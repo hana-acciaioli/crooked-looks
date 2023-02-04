@@ -3,21 +3,60 @@ body {
   font-family: 'roboto', Verdana, sans-serif;
   color: #ddd;
 }
+.toggle {
+  display: none;
+}
+nav {
+  display: flex;
+  /* padding: 1rem; */
+  margin: 1fr;
+  display: flex(1fr);
+  text-align: center;
+}
+
+.full-nav {
+  position: fixed;
+  display: inline-block;
+  /* padding: 1rem; */
+  margin: 1fr;
+  display: flex(1fr);
+  text-align: center;
+
+  z-index: 2;
+  font-weight: bold;
+}
+nav a.active {
+  color: #7c7878;
+  text-decoration: none;
+}
+.hidden-nav a:hover {
+  color: #e1f6f4;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+nav a {
+  display: flex;
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 1.6rem;
+  color: rgba(212, 206, 241, 0.8);
+}
 
 @media (max-width: 991px) {
   .showcase,
   .showcase header {
     padding: auto;
   }
+
+  .full-nav {
+    display: none;
+  }
   .text h2 {
     font-size: 3em;
-    /* margin: auto; */
-  }
-  .text h3 {
-    font-size: 2em;
   }
   .toggle {
     color: #4f4f4f;
+    display: block;
     position: fixed;
     top: 0px;
     right: 15px;
@@ -25,7 +64,7 @@ body {
     text-decoration: none;
     font-size: 3rem;
     text-shadow: 1px 1px 10px hsla(30, 0%, 0%, 1);
-    transition: all 0.15s ease;
+    /* transition: all 0.15s ease; */
     cursor: pointer;
     border-style: none;
     background-color: transparent;
@@ -33,37 +72,35 @@ body {
   .toggle img {
     width: 75px;
     padding-right: 5px;
-    padding-left: 30px;
+    padding-left: 40px;
     padding-top: 15px;
-    color: #4f4f4f;
+
+    filter: invert(5);
   }
   .hidden-nav {
     position: fixed;
-    display: block;
     top: 100px;
-    bottom: 0px;
-    padding: 2rem;
-    z-index: 10;
+    bottom: 75px;
+    z-index: 6;
     width: 300px;
+    padding-top: 50px;
     background-color: rgba(61, 20, 243, 0.4);
     border-radius: 2%;
-    transition: all 0.15s ease;
-    font-size: 1.6rem;
-    /* text-decoration: none; */
+    transition: all 0.5s ease-in-out;
     font-weight: bold;
   }
   nav a.active {
-    color: #7c7878;
+    color: #fcfcfc;
     text-decoration: none;
   }
   .hidden-nav a:hover {
-    color: #e1f6f4;
+    color: #872fec;
     transition: all 0.3s ease;
     text-decoration: none;
   }
   nav a {
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 1.5rem;
     display: block;
     color: rgba(212, 206, 241, 0.8);
   }
