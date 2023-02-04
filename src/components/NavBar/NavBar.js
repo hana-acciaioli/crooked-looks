@@ -8,6 +8,7 @@ export default function NavBar() {
 
   const naveToggleHandler = () => {
     !navDisplay ? setNavDisplay(true) : setNavDisplay(false);
+    console.log('click');
   };
   return (
     <nav>

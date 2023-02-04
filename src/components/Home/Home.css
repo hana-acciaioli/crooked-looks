@@ -1,49 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-/* @font-face {
-  font-family: 'MyWebFont';
-  src: url('WebFont.eot');
-  src: url('WebFont.eot?#iefix') format('embedded-opentype'), url('WebFont.woff') format('woff'),
-    url('WebFont.ttf') format('truetype'), url('WebFont.svg#webfont') format('svg');
-} */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
+*/ header .logo {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
 }
-.toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
-}
-.toggle.active {
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-}
+
 .showcase {
   position: absolute;
   right: 0;
@@ -53,14 +21,11 @@ header .logo {
   display: flex;
   /* justify-content: space-between; */
   justify-content: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   background: #111;
-  transition: 0.5s;
-  z-index: 2;
+  /* transition: 0.5s; */
+  /* z-index: 2; */
   justify-items: center;
-}
-.showcase.active {
-  right: 300px;
 }
 
 .showcase video {
@@ -72,16 +37,7 @@ header .logo {
   object-fit: cover;
   opacity: 0.8;
 }
-/* change color theme to green and blue*/
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #03a9f4;
-  mix-blend-mode: overlay;
-} */
+
 .text {
   position: relative;
   z-index: 10;
@@ -157,30 +113,6 @@ header .logo {
 .social li a:hover {
   transform: scale(0.5) translateY(-15px);
 }
-/* .menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* .menu ul {
-  position: relative;
-}
-.menu ul li {
-  list-style: none;
-} */
-/* .menu ul li a {
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover {
-  color: #03a9f4;
-} */
 
 @media (max-width: 991px) {
   .showcase,
@@ -189,6 +121,7 @@ header .logo {
   }
   .text h2 {
     font-size: 3em;
+    /* margin: auto; */
   }
   .text h3 {
     font-size: 2em;

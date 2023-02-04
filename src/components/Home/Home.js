@@ -2,23 +2,17 @@ import React from 'react';
 import './Home.css';
 import NavBar from '../NavBar/NavBar.js';
 export default function Home() {
-  //   const menuToggle = querySelector('.toggle');
-  //   const showcase = querySelector('.showcase');
-
-  //   function menuToggleHandler() {
-  //     menuToggle.classNameList.toggle('active');
-  //     showcase.classNameList.toggle('active');
-  //   }
-
   return (
     <div>
       {' '}
       <NavBar />
       <section className="showcase">
-        <header>
-          {/* <h2 className="logo">Crooked Looks</h2> */}
-          {/* <div className="toggle" onClick={() => menuToggleHandler()}></div> */}
-        </header>
+        <background-video
+          src="CrookedLooksBurn1080FINAL.webmsd.webm"
+          muted
+          loop
+          autoPlay
+        ></background-video>
         <video src="CrookedLooksBurn1080FINAL.webmsd.webm" muted loop autoPlay></video>
         <div className="overlay"></div>
         <div className="text">
