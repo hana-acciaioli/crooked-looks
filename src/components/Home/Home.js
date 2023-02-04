@@ -5,12 +5,12 @@ export default function Home() {
     <div>
       {' '}
       <section className="showcase">
-        <background-video
+        {/* <background-video
           src="CrookedLooksBurn1080FINAL.webmsd.webm"
           muted
           loop
           autoPlay
-        ></background-video>
+        ></background-video> */}
         <video src="CrookedLooksBurn1080FINAL.webmsd.webm" muted loop autoPlay></video>
         <div className="overlay"></div>
         <div className="text">

@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink, Switch } from 'react-router-dom';
 import './NavBar.css';
-import { useFanContext } from '../../context/FanContext.js';
+import { useUIContext } from '../../context/UIContext.js';
 
 export default function NavBar() {
-  const { navDisplay, setNavDisplay } = useFanContext();
+  const { navDisplay, setNavDisplay } = useUIContext();
 
   const naveToggleHandler = () => {
     !navDisplay ? setNavDisplay(true) : setNavDisplay(false);

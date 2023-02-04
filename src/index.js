@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './context/UserContext.js';
-import { FanProvider } from './context/FanContext.js';
+import { UIProvider } from './context/UIContext.js';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -16,9 +16,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <FanProvider>
+        <UIProvider>
           <App />
-        </FanProvider>
+        </UIProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
