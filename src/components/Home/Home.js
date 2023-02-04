@@ -22,9 +22,9 @@ export default function Home() {
         <div className="overlay"></div>
         <div className="text">
           <h2>Crooked Looks </h2>
-          <h4>Rock n Roll band straight outta Portland, OR</h4>
+          {/* <h4>Rock n Roll band straight outta Portland, OR</h4> */}
           <p></p>
-          <a href="#">Listen</a>
+          {/* <a href="#">Listen</a> */}
         </div>
         <ul className="social">
           <li>

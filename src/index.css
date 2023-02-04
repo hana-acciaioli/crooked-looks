@@ -13,3 +13,10 @@ code {
 * {
   font-family: Roboto, sans-serif;
 }
+
+@font-face {
+  font-family: 'rebel-nation';
+  font-weight: 400;
+  src: url('../public/assets/fonts/rebel-nation.regular-webfont.woff2') format(woff2);
+  src: url('../public/assets/fonts/rebel-nation.regular-webfont.woff') format(woff);
+}
