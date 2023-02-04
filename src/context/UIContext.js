@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { getVideos } from '../services/videos.js';
 
 const UIContext = createContext();
 
@@ -6,6 +7,18 @@ const UIProvider = ({ children }) => {
   const [navDisplay, setNavDisplay] = useState(false);
   const [videos, setVideos] = useState([]);
   const [newVideo, setNewVideo] = useState('');
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const data = await getVideos();
+        setVideos(data);
+      } catch (e) {
+        console.error(e.message);
+      }
+    };
+    fetchVideos();
+  }, []);
 
   return (
     <UIContext.Provider
