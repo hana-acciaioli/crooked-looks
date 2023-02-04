@@ -1,22 +1,36 @@
 import React from 'react';
 import './VideoForm.css';
+import { createVideo } from '../../services/videos.js';
+import { useUIContext } from '../../context/UIContext.js';
 
 export default function VideoForm() {
+  const { newVideo, setNewVideo } = useUIContext();
+
+  const newVideoHandler = async (e) => {
+    e.preventDefault();
+    try {
+      console.log('event', newVideo);
+      await createVideo(newVideo);
+      setNewVideo('');
+    } catch (e) {
+      console.error(e.message);
+    }
+  };
   return (
     <div className="align">
-      <form action="https://httpbin.org/post" method="POST" className="form video">
+      <form className="form video">
         <div className="form__field">
           <input
-            id="login__username"
+            // id="login__username"
             type="text"
-            name="video"
             className="form__input"
             placeholder="Video URL"
-            required
+            value={newVideo}
+            onChange={(e) => setNewVideo(e.target.value)}
           ></input>
         </div>
         <div className="form__field">
-          <input type="submit" value="Submit"></input>
+          <input type="submit" onClick={newVideoHandler}></input>
         </div>
       </form>
     </div>

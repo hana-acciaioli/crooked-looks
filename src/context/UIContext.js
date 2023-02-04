@@ -5,9 +5,12 @@ const UIContext = createContext();
 const UIProvider = ({ children }) => {
   const [navDisplay, setNavDisplay] = useState(false);
   const [videos, setVideos] = useState([]);
+  const [newVideo, setNewVideo] = useState('');
 
   return (
-    <UIContext.Provider value={{ videos, setVideos, navDisplay, setNavDisplay }}>
+    <UIContext.Provider
+      value={{ newVideo, setNewVideo, videos, setVideos, navDisplay, setNavDisplay }}
+    >
       {children}
     </UIContext.Provider>
   );
