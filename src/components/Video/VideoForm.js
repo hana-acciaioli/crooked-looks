@@ -9,7 +9,6 @@ export default function VideoForm() {
   const newVideoHandler = async (e) => {
     e.preventDefault();
     try {
-      console.log('event', newVideo);
       await createVideo(newVideo);
       setNewVideo('');
     } catch (e) {
