@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useUserContext } from '../../context/UserContext.js';
 import { useParams, NavLink, Redirect } from 'react-router-dom';
 import { authUser } from '../../services/auth';
@@ -8,8 +8,8 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import ListItemButton from '@mui/material/ListItemButton';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import ListItemButton from '@mui/material/ListItemButton';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-
+import NavBar from '../NavBar/NavBar.js';
 export default function Home() {
   //   const menuToggle = querySelector('.toggle');
   //   const showcase = querySelector('.showcase');
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div>
       {' '}
+      <NavBar />
       <section className="showcase">
         <header>
           {/* <h2 className="logo">Crooked Looks</h2> */}

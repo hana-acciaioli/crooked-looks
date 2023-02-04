@@ -1,9 +1,13 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const FanContext = createContext();
 
 const FanProvider = ({ children }) => {
-  return <FanContext.Provider>{children}</FanContext.Provider>;
+  const [navDisplay, setNavDisplay] = useState(false);
+
+  return (
+    <FanContext.Provider value={{ navDisplay, setNavDisplay }}>{children}</FanContext.Provider>
+  );
 };
 
 const useFanContext = () => {
