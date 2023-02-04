@@ -8,11 +8,13 @@ export default function VideoList() {
   return (
     <div>
       <VideoForm />
-      {videos.map((video) => (
-        <div key={video.id} className="video-showcase">
-          <iframe src={`${video.video_url}`} alt={video.title} allowFullScreen></iframe>
-        </div>
-      ))}
+      <div>
+        {videos.map((video) => (
+          <div key={video.id} className="video-showcase">
+            <iframe src={`${video.video_url}`} alt={video.title} allowFullScreen></iframe>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

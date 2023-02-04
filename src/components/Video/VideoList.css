@@ -2,5 +2,10 @@
   background-color: rgb(8, 8, 8, 0.6);
   width: 100%;
   color: white;
-  padding: 3rem;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0.2rem;
+  object-fit: contain;
 }
