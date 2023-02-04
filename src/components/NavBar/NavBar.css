@@ -30,6 +30,13 @@ body {
     border-style: none;
     background-color: transparent;
   }
+  .toggle img {
+    width: 75px;
+    padding-right: 5px;
+    padding-left: 30px;
+    padding-top: 15px;
+    color: #4f4f4f;
+  }
   .hidden-nav {
     position: fixed;
     display: block;

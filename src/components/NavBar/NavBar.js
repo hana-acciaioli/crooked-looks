@@ -11,9 +11,16 @@ export default function NavBar() {
   };
   return (
     <nav>
-      <button className="toggle" onClick={naveToggleHandler}>
-        ☰
-      </button>
+      {!navDisplay ? (
+        <button className="toggle" onClick={naveToggleHandler}>
+          ☰
+        </button>
+      ) : (
+        <button className="toggle" onClick={naveToggleHandler}>
+          <img src="assets/images/reject.png"></img>
+        </button>
+      )}
+
       {navDisplay && (
         <div className="hidden-nav">
           <NavLink exact to="/">
