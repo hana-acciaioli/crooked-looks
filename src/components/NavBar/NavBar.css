@@ -4,51 +4,60 @@ body {
   color: #ddd;
 }
 
-nav a.active {
-  color: #6f6f6f;
-  text-decoration: none;
-}
-.hidden-nav a:hover {
-  color: #e1f6f4;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-nav a {
-  text-decoration: none;
-  display: flex;
-  padding: 0.5rem;
-}
-
-.hidden-nav {
-  position: fixed;
-  top: 100px;
-  bottom: 0px;
-  /* left: -190px; */
-  padding-top: 200px;
-  padding: 2rem;
-  z-index: 10;
-  width: 300px;
-  /* padding: 20px; */
-  background-color: rgba(233, 148, 122, 0.6);
-  border-radius: 2%;
-  /* transition: all 0.15s ease; */
-  font-size: 1.6rem;
-  cursor: pointer;
-  /* margin: 1fr; */
-  text-decoration: none;
-}
-
-.toggle {
-  color: #4f4f4f;
-  position: fixed;
-  top: 0px;
-  right: 15px;
-  z-index: 5;
-  text-decoration: none;
-  font-size: 3rem;
-  text-shadow: 1px 1px 10px hsla(30, 0%, 0%, 1);
-  transition: all 0.15s ease;
-  cursor: pointer;
-  border-style: none;
-  background-color: transparent;
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: auto;
+  }
+  .text h2 {
+    font-size: 3em;
+    /* margin: auto; */
+  }
+  .text h3 {
+    font-size: 2em;
+  }
+  .toggle {
+    color: #4f4f4f;
+    position: fixed;
+    top: 0px;
+    right: 15px;
+    z-index: 5;
+    text-decoration: none;
+    font-size: 3rem;
+    text-shadow: 1px 1px 10px hsla(30, 0%, 0%, 1);
+    transition: all 0.15s ease;
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+  }
+  .hidden-nav {
+    position: fixed;
+    display: block;
+    top: 100px;
+    bottom: 0px;
+    padding: 2rem;
+    z-index: 10;
+    width: 300px;
+    background-color: rgba(61, 20, 243, 0.4);
+    border-radius: 2%;
+    transition: all 0.15s ease;
+    font-size: 1.6rem;
+    /* text-decoration: none; */
+    font-weight: bold;
+  }
+  nav a.active {
+    color: #7c7878;
+    text-decoration: none;
+  }
+  .hidden-nav a:hover {
+    color: #e1f6f4;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  nav a {
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    color: rgba(212, 206, 241, 0.8);
+  }
 }
