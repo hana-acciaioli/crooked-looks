@@ -2,12 +2,22 @@ import React from 'react';
 import { NavLink, Switch } from 'react-router-dom';
 import './NavBar.css';
 import { useUIContext } from '../../context/UIContext.js';
+import { useUserContext } from '../../context/UserContext.js';
+import { signOut } from '../../services/auth.js';
 
 export default function NavBar() {
   const { navDisplay, setNavDisplay } = useUIContext();
-
+  const { user, setUser } = useUserContext();
   const naveToggleHandler = () => {
     !navDisplay ? setNavDisplay(true) : setNavDisplay(false);
+  };
+  const signOutHandler = async () => {
+    try {
+      await signOut();
+      setUser(null);
+    } catch (e) {
+      console.error(e.message);
+    }
   };
   return (
     <nav>
@@ -30,6 +40,7 @@ export default function NavBar() {
         {/* <NavLink to="/news">News</NavLink> */}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
+        {user && <button onClick={signOutHandler}>Sign Out</button>}
       </div>
 
       {navDisplay && (
@@ -43,6 +54,7 @@ export default function NavBar() {
           {/* <NavLink to="/news">News</NavLink> */}
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          {user && <button onClick={signOutHandler}>Sign Out</button>}
         </div>
       )}
     </nav>

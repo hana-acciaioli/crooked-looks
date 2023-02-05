@@ -2,12 +2,14 @@ import React from 'react';
 import VideoForm from './VideoForm.js';
 import './VideoList.css';
 import { useUIContext } from '../../context/UIContext.js';
+import { useUserContext } from '../../context/UserContext.js';
 
 export default function VideoList() {
+  const { user } = useUserContext();
   const { videos } = useUIContext();
   return (
     <div>
-      <VideoForm />
+      {user && <VideoForm />}
       <div>
         {videos.map((video) => (
           <div key={video.id} className="video-showcase">

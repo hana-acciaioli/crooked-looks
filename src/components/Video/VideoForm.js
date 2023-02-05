@@ -4,12 +4,14 @@ import { createVideo } from '../../services/videos.js';
 import { useUIContext } from '../../context/UIContext.js';
 
 export default function VideoForm() {
-  const { newVideo, setNewVideo } = useUIContext();
+  const { newVideo, setNewVideo, videos, setVideos } = useUIContext();
 
   const newVideoHandler = async (e) => {
     e.preventDefault();
     try {
       await createVideo(newVideo);
+      const newVideoList = [...videos, { newVideo }];
+      setVideos(newVideoList);
       setNewVideo('');
     } catch (e) {
       console.error(e.message);
