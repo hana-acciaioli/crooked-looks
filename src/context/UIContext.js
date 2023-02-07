@@ -7,6 +7,14 @@ const UIProvider = ({ children }) => {
   const [navDisplay, setNavDisplay] = useState(false);
   const [videos, setVideos] = useState([]);
   const [newVideo, setNewVideo] = useState('');
+  const [shows, setShows] = useState([]);
+  const [newShow, setNewShow] = useState({
+    title: '',
+    date: '',
+    time: '',
+    location: '',
+    link: '',
+  });
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -22,7 +30,18 @@ const UIProvider = ({ children }) => {
 
   return (
     <UIContext.Provider
-      value={{ newVideo, setNewVideo, videos, setVideos, navDisplay, setNavDisplay }}
+      value={{
+        newShow,
+        setNewShow,
+        shows,
+        setShows,
+        newVideo,
+        setNewVideo,
+        videos,
+        setVideos,
+        navDisplay,
+        setNavDisplay,
+      }}
     >
       {children}
     </UIContext.Provider>

@@ -6,6 +6,22 @@ body {
 .toggle {
   display: none;
 }
+
+.secondary-header {
+  position: fixed;
+  top: 3rem;
+  left: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: 'rebel-nation', Arial, Helvetica, sans-serif;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgb(242, 205, 252), 0 0 25px rgb(100, 16, 156), 0 0 5px rgb(1, 1, 61);
+  filter: brightness(1.25);
+}
+
 /* nav {
   display: flex(1fr);
   text-align: center;
@@ -17,8 +33,8 @@ body {
   /* margin: 1fr; */
   z-index: 2;
   font-weight: bold;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 20rem;
+  /* margin-right: 2rem; */
 }
 nav a.active {
   color: #7c7878;

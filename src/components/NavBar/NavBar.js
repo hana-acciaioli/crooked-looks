@@ -21,6 +21,7 @@ export default function NavBar() {
   };
   return (
     <nav>
+      <h3 className="secondary-header">Crooked Looks</h3>
       {!navDisplay ? (
         <button className="toggle" onClick={naveToggleHandler}>
           ☰
