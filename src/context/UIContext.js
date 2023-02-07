@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getVideos } from '../services/videos.js';
+import { getShows } from '../services/shows.js';
 
 const UIContext = createContext();
 
@@ -19,6 +20,18 @@ const UIProvider = ({ children }) => {
       }
     };
     fetchVideos();
+  }, []);
+
+  useEffect(() => {
+    const fetchShows = async () => {
+      try {
+        const data = await getShows();
+        setShows(data);
+      } catch (e) {
+        console.error(e.message);
+      }
+    };
+    fetchShows();
   }, []);
 
   return (

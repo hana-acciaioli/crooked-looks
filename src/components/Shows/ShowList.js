@@ -13,7 +13,12 @@ export default function VideoList() {
       {/* } */}
       <div>
         {shows.map((show) => (
-          <div key={show.id} className="show-showcase"></div>
+          <div key={show.id} className="show-showcase">
+            {show.date}
+            {show.title}
+            {show.time}
+            {show.location}
+          </div>
         ))}
       </div>
     </div>
