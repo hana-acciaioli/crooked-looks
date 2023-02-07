@@ -4,7 +4,7 @@ import { createShow } from '../../services/shows.js';
 import { useUIContext } from '../../context/UIContext.js';
 
 export default function ShowForm() {
-  const { shows, setShows, newShow, setNewShow } = useUIContext();
+  const { shows, setShows } = useUIContext();
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -15,12 +15,11 @@ export default function ShowForm() {
     e.preventDefault();
     try {
       await createShow(title, date, time, location, link);
-      //   const newShowList = [...shows];
-      //   setShows();
-      setNewShow('');
       setTitle('');
       setDate('');
       setTime('00:00 AM');
+      setLocation('');
+      setLink('');
     } catch (e) {
       console.error(e.message);
     }
@@ -53,14 +52,14 @@ export default function ShowForm() {
             type="text"
             className="form__input"
             placeholder="Location"
-            value={newShow.location}
+            value={location}
             onChange={(e) => setLocation(e.target.value)}
           ></input>
           <input
             type="text"
             className="form__input"
             placeholder="Link"
-            value={newShow.link}
+            value={link}
             onChange={(e) => setLink(e.target.value)}
           ></input>{' '}
         </div>

@@ -8,13 +8,6 @@ const UIProvider = ({ children }) => {
   const [videos, setVideos] = useState([]);
   const [newVideo, setNewVideo] = useState('');
   const [shows, setShows] = useState([]);
-  const [newShow, setNewShow] = useState({
-    title: '',
-    date: '',
-    time: '',
-    location: '',
-    link: '',
-  });
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -31,8 +24,6 @@ const UIProvider = ({ children }) => {
   return (
     <UIContext.Provider
       value={{
-        newShow,
-        setNewShow,
         shows,
         setShows,
         newVideo,
