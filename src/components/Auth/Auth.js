@@ -70,7 +70,7 @@ export default function Auth() {
             Sign in
           </Typography>
           <nav>
-            <NavLink to="/auth/sign-up" variant="body2">
+            <NavLink to="/auth/sign-up" variant="body2" className="nav-link">
               Sign Up
             </NavLink>
             <NavLink to="/auth/sign-in">Sign In</NavLink>

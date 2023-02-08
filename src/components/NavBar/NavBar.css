@@ -1,5 +1,4 @@
-*/ html,
-body {
+* {
   font-family: 'roboto', Verdana, sans-serif;
   color: #ddd;
 }
@@ -30,11 +29,12 @@ body {
   position: fixed;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   z-index: 2;
   font-weight: bold;
+  padding-right: 20rem;
   margin-left: 20rem;
-  /* margin-right: 2rem; */
+  margin-right: 20rem;
 }
 nav a.active {
   color: #f8eded;
@@ -44,20 +44,20 @@ nav a:hover {
   text-decoration: none;
   color: #4f4f4f;
 }
-.hidden-nav a:hover {
-  color: #e1f6f4;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
 nav a {
   display: flex;
   text-decoration: none;
-  padding: 2rem;
+  padding-top: 2rem;
   font-size: 1.6rem;
   color: rgba(212, 206, 241, 0.8);
 }
 .hidden-nav {
   display: none;
+}
+.hidden-nav a:hover {
+  color: #e1f6f4;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 @media (max-width: 991px) {

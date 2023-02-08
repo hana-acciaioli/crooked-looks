@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.social-container {
+  display: flex;
+}
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  display: inline-block;
+  margin-right: 1rem;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  width: 2rem;
+}
+.social-img {
+  width: fill;
+}
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}

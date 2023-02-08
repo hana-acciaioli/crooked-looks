@@ -12,6 +12,7 @@
   background-color: black;
   border-color: white;
   border-style: solid;
+  border-radius: 0.25rem;
   margin-top: 5rem;
   height: 15rem;
   font-size: 1.5em;
@@ -45,6 +46,9 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: 0.5rem;
+  }
+  .date-container {
+    font-size: 2rem;
   }
   .location-container {
     padding: 0.5rem;

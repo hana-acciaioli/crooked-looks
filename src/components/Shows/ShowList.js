@@ -20,7 +20,7 @@ export default function VideoList() {
       dateObj.month === '02' && (long = 'Feb');
     }
     {
-      dateObj.month === '03' && (long = 'Mar');
+      dateObj.month === '03' && (long = 'March');
     }
     {
       dateObj.month === '04' && (long = 'April');
@@ -32,7 +32,7 @@ export default function VideoList() {
       dateObj.month === '06' && (long = 'June');
     }
     {
-      dateObj.month === '07' && (long = 'Jul');
+      dateObj.month === '07' && (long = 'July');
     }
     {
       dateObj.month === '08' && (long = 'Aug');

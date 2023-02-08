@@ -5,6 +5,7 @@ import Home from './components/Home/Home.js';
 import NavBar from './components/NavBar/NavBar.js';
 import VideoList from './components/Video/VideoList.js';
 import ShowList from './components/Shows/ShowList.js';
+import Social from './components/Layout/Footer/Social.js';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/shows" component={ShowList} />
         <Route path="/auth/:type" component={Auth} />
       </Switch>
+      <Social />
     </div>
   );
 }
