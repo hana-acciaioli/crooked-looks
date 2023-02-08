@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './ShowForm.css';
 import { createShow } from '../../services/shows.js';
-import { useUIContext } from '../../context/UIContext.js';
 
 export default function ShowForm() {
-  const { shows, setShows } = useUIContext();
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const [location, setLocation] = useState('');

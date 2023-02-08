@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Switch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import { useUIContext } from '../../context/UIContext.js';
 import { useUserContext } from '../../context/UserContext.js';
