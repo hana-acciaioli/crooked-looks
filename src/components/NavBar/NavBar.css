@@ -28,17 +28,21 @@ body {
 } */
 .full-nav {
   position: fixed;
-  display: flex;
-  /* padding: 1rem; */
-  /* margin: 1fr; */
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
   z-index: 2;
   font-weight: bold;
   margin-left: 20rem;
   /* margin-right: 2rem; */
 }
 nav a.active {
-  color: #7c7878;
+  color: #f8eded;
   text-decoration: none;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #4f4f4f;
 }
 .hidden-nav a:hover {
   color: #e1f6f4;
