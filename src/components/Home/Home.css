@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-*/ header .logo {
+* header .logo {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
@@ -50,7 +50,6 @@
   line-height: 1em;
   text-transform: uppercase;
 }
-
 
 .social {
   position: absolute;

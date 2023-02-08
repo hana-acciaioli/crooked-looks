@@ -1,14 +1,10 @@
-@use postcss-preset-env {
+/* @use postcss-preset-env {
   stage: 0;
-}
-
-/* config.css */
+} */
 
 :root {
   --baseColor: #202020;
 }
-
-/* helpers/align.css */
 
 .align {
   display: flex;
@@ -25,8 +21,6 @@
   max-inline-size: 20rem;
 }
 
-/* helpers/hidden.css */
-
 .hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -37,8 +31,6 @@
   position: absolute;
   width: 1px;
 }
-
-/* helpers/icon.css */
 
 :root {
   --iconFill: var(--baseColor);
@@ -203,7 +195,6 @@ input[type='submit'] {
 .show input[type='submit']:hover {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
-
 
 p {
   margin-block: 1.5rem;

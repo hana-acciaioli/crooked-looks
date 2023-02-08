@@ -8,8 +8,6 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import ListItemButton from '@mui/material/ListItemButton';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
@@ -28,7 +26,7 @@ export default function Auth() {
   const theme = createTheme();
 
   if (user) {
-    return <Redirect to="/todos" />;
+    return <Redirect to="/" />;
   }
 
   function Copyright(props) {
