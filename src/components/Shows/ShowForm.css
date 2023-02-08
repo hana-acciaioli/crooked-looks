@@ -204,7 +204,6 @@ input[type='submit'] {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
 
-/* modules/text.css */
 
 p {
   margin-block: 1.5rem;
@@ -217,7 +216,6 @@ p {
 @media (max-width: 991px) {
   .show input {
     display: inline-block;
-    /* flex: 5; */
   }
   .form__field {
     display: inline-block;

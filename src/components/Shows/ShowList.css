@@ -26,14 +26,6 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.location-container {
-}
-
-.city-container {
-}
-.link-container {
-  /* border-style: solid; */
-}
 @media (max-width: 991px) {
   .show-showcase {
     padding: 2rem 2rem;

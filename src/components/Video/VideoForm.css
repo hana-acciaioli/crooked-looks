@@ -1,14 +1,10 @@
 @use postcss-preset-env {
   stage: 0;
 }
-
-/* config.css */
-
 :root {
   --baseColor: #202020;
 }
 
-/* helpers/align.css */
 
 .align {
   display: flex;
@@ -25,7 +21,6 @@
   max-inline-size: 20rem;
 }
 
-/* helpers/hidden.css */
 
 .hidden {
   border: 0;
@@ -38,7 +33,6 @@
   width: 1px;
 }
 
-/* helpers/icon.css */
 
 :root {
   --iconFill: var(--baseColor);
@@ -80,7 +74,6 @@ body {
   min-block-size: 100vh;
 }
 
-/* modules/anchor.css */
 
 :root {
   --anchorColor: rgb(226, 70, 218);
@@ -97,7 +90,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* modules/form.css */
 
 :root {
   --formGap: 0.875rem;
@@ -137,7 +129,6 @@ input[type='submit'] {
   flex: 1;
 }
 
-/* modules/login.css */
 
 :root {
   --loginBorderRadus: 0.25rem;
@@ -174,8 +165,6 @@ input[type='submit'] {
 .video input[type='password'],
 .video input[type='text'] {
   background-color: var(--loginInputBackgroundColor);
-  /* border-bottom-left-radius: 0;
-  border-top-left-radius: 0; */
 }
 
 .video input[type='text']:focus,
@@ -195,7 +184,6 @@ input[type='submit'] {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
 
-/* modules/text.css */
 
 p {
   margin-block: 1.5rem;

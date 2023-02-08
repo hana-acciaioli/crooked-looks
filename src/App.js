@@ -10,7 +10,6 @@ import Social from './components/Layout/Footer/Social.js';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />

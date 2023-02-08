@@ -22,7 +22,6 @@ export default function VideoForm() {
       <form className="form video">
         <div className="form__field">
           <input
-            // id="login__username"
             type="text"
             className="form__input"
             placeholder="Video URL"
