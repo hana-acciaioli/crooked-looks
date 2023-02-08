@@ -5,19 +5,17 @@ import { useUIContext } from '../../context/UIContext.js';
 
 export default function ShowForm() {
   const { shows, setShows } = useUIContext();
-  const [title, setTitle] = useState('');
+  const [city, setCity] = useState('');
   const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
   const [location, setLocation] = useState('');
   const [link, setLink] = useState('');
 
   const newShowHandler = async (e) => {
     e.preventDefault();
     try {
-      await createShow(title, date, time, location, link);
-      setTitle('');
+      await createShow(date, city, location, link);
+      setCity('');
       setDate('');
-      setTime('00:00 AM');
       setLocation('');
       setLink('');
     } catch (e) {
@@ -29,13 +27,6 @@ export default function ShowForm() {
       <form className="form show">
         <div className="form__field">
           <input
-            type="text"
-            className="form__input"
-            placeholder="Show Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          ></input>
-          <input
             type="date"
             className="form__input"
             placeholder="2024-01-01"
@@ -43,15 +34,16 @@ export default function ShowForm() {
             onChange={(e) => setDate(e.target.value)}
           ></input>
           <input
-            type="time"
+            type="text"
             className="form__input"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
+            placeholder="City"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
           ></input>
           <input
             type="text"
             className="form__input"
-            placeholder="Location"
+            placeholder="Venue"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           ></input>

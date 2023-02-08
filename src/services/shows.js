@@ -1,7 +1,7 @@
 import { client, checkError } from './client';
 
-export async function createShow(title, date, time) {
-  const resp = await client.from('shows').insert({ title, date, time });
+export async function createShow(date, city, location, link) {
+  const resp = await client.from('shows').insert({ date, city, location, link });
   return checkError(resp);
 }
 
