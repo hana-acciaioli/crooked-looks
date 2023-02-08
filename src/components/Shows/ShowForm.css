@@ -166,8 +166,6 @@ input[type='submit'] {
   padding-inline: 1.25rem;
 }
 
-.show input[type='date'],
-.show input[type='time'],
 .show input[type='text'] {
   background-color: var(--loginInputBackgroundColor);
   margin: 0.25rem;
