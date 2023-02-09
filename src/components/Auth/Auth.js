@@ -74,7 +74,7 @@ export default function Auth() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
-                autoFocus
+                // autoFocus
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>

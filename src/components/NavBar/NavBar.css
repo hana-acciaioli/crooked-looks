@@ -8,7 +8,7 @@
 
 .secondary-header {
   position: fixed;
-  top: 3rem;
+  top: 2.2rem;
   left: 2rem;
   font-size: 2rem;
   font-weight: 800;
@@ -74,10 +74,10 @@ nav a {
     position: fixed;
     top: 0px;
     right: 15px;
-    z-index: 2;
+    z-index: 3;
     text-decoration: none;
     font-size: 3rem;
-    text-shadow: 1px 1px 10px hsla(30, 0%, 0%, 1);
+    /* text-shadow: 1px 1px 10px hsla(30, 0%, 0%, 1); */
     cursor: pointer;
     border-style: none;
     background-color: transparent;
@@ -95,14 +95,24 @@ nav a {
     display: block;
     top: 100px;
     bottom: 75px;
-    z-index: 6;
-    width: 300px;
-    padding-top: 50px;
-    background-color: rgba(117, 20, 243, 0.753);
+    z-index: 99;
+    width: 250px;
+    padding-top: 30px;
+    background: linear-gradient(
+      /* 90deg, */ rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 0.7) 35%,
+      rgba(0, 212, 255, 0.5) 100%
+    );
     border-radius: 2%;
-    transition: all 0.5s ease-in-out;
-    font-weight: bold;
+    transition: all 2s ease;
+    transform: translate(-100%);
+
+    /* font-weight: bold; */
   }
+  .show_hidden-nav {
+    transform: translate(0);
+  }
+
   nav a.active {
     color: #fcfcfc;
     text-decoration: none;

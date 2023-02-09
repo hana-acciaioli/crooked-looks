@@ -45,7 +45,7 @@ export default function NavBar() {
       </div>
 
       {navDisplay && (
-        <div className="hidden-nav">
+        <div className={open ? 'show_hidden-nav hidden-nav' : 'hidden-nav'}>
           <NavLink exact to="/">
             Home
           </NavLink>
