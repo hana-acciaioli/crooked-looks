@@ -27,7 +27,6 @@ export default function ShowForm() {
           <input
             type="date"
             className="form__input"
-            placeholder="2024-01-01"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           ></input>

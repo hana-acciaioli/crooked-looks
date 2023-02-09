@@ -166,7 +166,8 @@ input[type='submit'] {
   padding-inline: 1.25rem;
 }
 
-.show input[type='text'] {
+.show input[type='text'],
+.show input[type='date'] {
   background-color: var(--loginInputBackgroundColor);
   margin: 0.25rem;
   /* border-bottom-left-radius: 0;
@@ -176,9 +177,7 @@ input[type='submit'] {
 .show input[type='text']:focus,
 .show input[type='text']:hover,
 .show input[type='date']:focus,
-.show input[type='date']:hover,
-.show input[type='time']:focus,
-.show input[type='time']:hover {
+.show input[type='date']:hover {
   background-color: var(--showInputHoverBackgroundColor);
 }
 

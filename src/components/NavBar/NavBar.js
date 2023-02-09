@@ -4,6 +4,7 @@ import './NavBar.css';
 import { useUIContext } from '../../context/UIContext.js';
 import { useUserContext } from '../../context/UserContext.js';
 import { signOut } from '../../services/auth.js';
+import { Button } from '@mui/material';
 
 export default function NavBar() {
   const { navDisplay, setNavDisplay } = useUIContext();
@@ -20,7 +21,7 @@ export default function NavBar() {
     }
   };
   return (
-    <nav>
+    <nav className="header">
       <h3 className="secondary-header">Crooked Looks</h3>
       {!navDisplay ? (
         <button className="toggle" onClick={naveToggleHandler}>
@@ -41,7 +42,7 @@ export default function NavBar() {
         {/* <NavLink to="/news">News</NavLink> */}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
-        {user && <button onClick={signOutHandler}>Sign Out</button>}
+        {user && <Button onClick={signOutHandler}>Sign Out</Button>}
       </div>
 
       {navDisplay && (
@@ -55,7 +56,7 @@ export default function NavBar() {
           {/* <NavLink to="/news">News</NavLink> */}
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          {user && <button onClick={signOutHandler}>Sign Out</button>}
+          {user && <Button onClick={signOutHandler}>Sign Out</Button>}
         </div>
       )}
     </nav>
