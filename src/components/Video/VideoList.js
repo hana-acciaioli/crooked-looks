@@ -11,7 +11,6 @@ export default function VideoList() {
   const { videos, setVideos } = useUIContext();
 
   const handleDelete = async (video) => {
-    console.log(video.id);
     try {
       const deletedVideo = await deleteVideo(video);
       setVideos((videos) => videos.filter((prevVideos) => prevVideos.id !== deletedVideo.id));

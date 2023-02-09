@@ -9,3 +9,7 @@ export async function getShows() {
   const resp = await client.from('shows').select('*').order('date');
   return checkError(resp);
 }
+export async function deleteShow({ id }) {
+  const resp = await client.from('shows').delete().match({ id }).single();
+  return checkError(resp);
+}

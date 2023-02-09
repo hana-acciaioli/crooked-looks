@@ -4,10 +4,11 @@ import { Button } from '@mui/material';
 import { useUIContext } from '../../context/UIContext.js';
 import { useUserContext } from '../../context/UserContext.js';
 import './ShowList.css';
+import { deleteShow } from '../../services/shows.js';
 
 export default function VideoList() {
   const { user } = useUserContext();
-  const { shows } = useUIContext();
+  const { shows, setShows } = useUIContext();
 
   function dateToString(date) {
     const [year, month, day] = date.split('-');
@@ -52,22 +53,33 @@ export default function VideoList() {
 
     return long + ' ' + dateObj.day;
   }
+  const handleDelete = async (show) => {
+    try {
+      const deletedShow = await deleteShow(show);
+      setShows((shows) => shows.filter((prevShows) => prevShows.id !== deletedShow.id));
+    } catch (e) {
+      console.error(e.message);
+    }
+  };
   return (
     <div>
       {user && <ShowForm />}
       <div className="show-showcase">
         {/* <h2>Upcoming Shows</h2> */}
         {shows.map((show) => (
-          <div key={show.id} className="show-container">
-            <div className="date-container">{dateToString(show.date)}</div>
-            <div className="details-container">
-              <div className="location-container">{show.location}</div>
-              <div className="city-container">{show.city}</div>
-              <Button as="a" href={show.link} className="link-container">
-                Details
-              </Button>
+          <>
+            <div key={show.id} className="show-container">
+              <div className="date-container">{dateToString(show.date)}</div>
+              <div className="details-container">
+                <div className="location-container">{show.location}</div>
+                <div className="city-container">{show.city}</div>
+                <Button as="a" href={show.link} className="link-container">
+                  Details
+                </Button>
+              </div>
             </div>
-          </div>
+            {user && <Button onClick={() => handleDelete(show)}>Delete</Button>}
+          </>
         ))}
       </div>
     </div>
