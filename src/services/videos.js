@@ -9,3 +9,8 @@ export async function getVideos() {
   const resp = await client.from('videos').select('*').order('created_at');
   return checkError(resp);
 }
+
+export async function deleteVideo({ id }) {
+  const resp = await client.from('videos').delete().match({ id }).single();
+  return checkError(resp);
+}
