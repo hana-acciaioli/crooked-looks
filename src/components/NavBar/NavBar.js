@@ -46,8 +46,8 @@ export default function NavBar() {
           {user && <Button onClick={signOutHandler}>Sign Out</Button>}
         </div>
       </nav>
-      <nav>
-        {navDisplay && (
+      {navDisplay && (
+        <nav className={open ? 'header-backdrop' : ''}>
           <div className={open ? 'show_hidden-nav hidden-nav' : 'hidden-nav'}>
             <NavLink exact to="/">
               Home
@@ -60,8 +60,8 @@ export default function NavBar() {
             <NavLink to="/contact">Contact</NavLink>
             {user && <Button onClick={signOutHandler}>Sign Out</Button>}
           </div>
-        )}
-      </nav>
+        </nav>
+      )}
     </div>
   );
 }
