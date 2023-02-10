@@ -20,6 +20,7 @@
 
 .date-container {
   font-size: 2em;
+  padding: 2rem;
 }
 .details-container {
   display: grid;

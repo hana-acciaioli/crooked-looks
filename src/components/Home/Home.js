@@ -5,16 +5,10 @@ export default function Home() {
     <div>
       {' '}
       <section className="showcase">
-        {/* <background-video
-          src="CrookedLooksBurn1080FINAL.webmsd.webm"
-          muted
-          loop
-          autoPlay
-        ></background-video> */}
         <video src="CrookedLooksBurn1080FINAL.webmsd.webm" muted loop autoPlay></video>
         <div className="overlay"></div>
         <div className="text">
-          <h2>Crooked Looks </h2>
+          {/* <h2>Crooked Looks </h2> */}
           {/* <h4>Rock n Roll band straight outta Portland, OR</h4> */}
           <p></p>
           {/* <a href="#">Listen</a> */}

@@ -21,32 +21,19 @@ export default function NavBar() {
     }
   };
   return (
-    <nav className="header">
-      <h3 className="secondary-header">Crooked Looks</h3>
-      {!navDisplay ? (
-        <button className="toggle" onClick={naveToggleHandler}>
-          ☰
-        </button>
-      ) : (
-        <button className="toggle" onClick={naveToggleHandler}>
-          <img src="assets/images/x-button.png"></img>
-        </button>
-      )}
-      <div className="full-nav">
-        <NavLink exact to="/">
-          Home
-        </NavLink>
-        <NavLink to="/watch">Watch</NavLink>
-        {/* <NavLink to="/listen">Listen</NavLink> */}
-        <NavLink to="/shows">Shows</NavLink>
-        {/* <NavLink to="/news">News</NavLink> */}
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        {user && <Button onClick={signOutHandler}>Sign Out</Button>}
-      </div>
-
-      {navDisplay && (
-        <div className={open ? 'show_hidden-nav hidden-nav' : 'hidden-nav'}>
+    <div>
+      <nav className="header">
+        <h3 className="secondary-header">Crooked Looks</h3>
+        {!navDisplay ? (
+          <button className="toggle" onClick={naveToggleHandler}>
+            ☰
+          </button>
+        ) : (
+          <button className="toggle" onClick={naveToggleHandler}>
+            <img src="assets/images/x-button.png"></img>
+          </button>
+        )}
+        <div className="full-nav">
           <NavLink exact to="/">
             Home
           </NavLink>
@@ -58,7 +45,23 @@ export default function NavBar() {
           <NavLink to="/contact">Contact</NavLink>
           {user && <Button onClick={signOutHandler}>Sign Out</Button>}
         </div>
-      )}
-    </nav>
+      </nav>
+      <nav>
+        {navDisplay && (
+          <div className={open ? 'show_hidden-nav hidden-nav' : 'hidden-nav'}>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
+            <NavLink to="/watch">Watch</NavLink>
+            {/* <NavLink to="/listen">Listen</NavLink> */}
+            <NavLink to="/shows">Shows</NavLink>
+            {/* <NavLink to="/news">News</NavLink> */}
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            {user && <Button onClick={signOutHandler}>Sign Out</Button>}
+          </div>
+        )}
+      </nav>
+    </div>
   );
 }
