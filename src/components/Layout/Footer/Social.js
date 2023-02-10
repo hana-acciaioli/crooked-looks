@@ -21,7 +21,7 @@ export default function Social() {
         </li>
         <li>
           <a href="https://www.tiktok.com/@thecrookedlooks?lang=en">
-            <img src="tik-tok.png" className="social-img" />
+            <img src="/tik-tok.png" className="social-img" />
           </a>
         </li>
       </ul>
