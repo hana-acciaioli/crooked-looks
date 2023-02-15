@@ -5,12 +5,12 @@ export default function Home() {
     <div>
       {' '}
       <section className="showcase">
-        <iframe
-          src="https://streamable.com/e/cu4ygf?autoplay=1&nocontrols=1&mute=1"
+        <video
+          src="https://www.youtube.com/watch?v=7NK_JOkuSVY"
           width="100%"
-          height="100%"
-          allow="autoplay"
-        ></iframe>
+          // height="100%"
+          // allow="autoplay"
+        ></video>
         <div className="overlay"></div>
         <div className="text">
           {/* <h2>Crooked Looks </h2> */}
