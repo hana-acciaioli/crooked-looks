@@ -5,12 +5,7 @@ export default function Home() {
     <div>
       {' '}
       <section className="showcase">
-        <video
-          src="https://www.youtube.com/watch?v=7NK_JOkuSVY"
-          width="100%"
-          // height="100%"
-          // allow="autoplay"
-        ></video>
+        <video src="/assets/videos/CrookedLooksBurn1080RESIZED.mp4" muted loop autoPlay></video>
         <div className="overlay"></div>
         <div className="text">
           {/* <h2>Crooked Looks </h2> */}
