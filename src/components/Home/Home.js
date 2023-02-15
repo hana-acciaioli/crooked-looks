@@ -5,7 +5,12 @@ export default function Home() {
     <div>
       {' '}
       <section className="showcase">
-        <video src="CrookedLooksBurn1080FINAL.webmsd.webm" muted loop autoPlay></video>
+        <iframe
+          src="https://streamable.com/e/cu4ygf?autoplay=1&nocontrols=1&mute=1"
+          width="100%"
+          height="100%"
+          allow="autoplay"
+        ></iframe>
         <div className="overlay"></div>
         <div className="text">
           {/* <h2>Crooked Looks </h2> */}
