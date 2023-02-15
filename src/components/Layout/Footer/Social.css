@@ -29,7 +29,7 @@
   width: 2rem;
 }
 .social-img {
-  width: fill;
+  width: stretch;
 }
 .social li a:hover {
   transform: scale(0.5) translateY(-15px);
