@@ -40,8 +40,7 @@
   margin-right: 20rem;
 }
 nav a.active {
-  color: purple;
-  text-decoration: none;
+  color: #872fec;
 }
 nav a:hover {
   text-decoration: none;
