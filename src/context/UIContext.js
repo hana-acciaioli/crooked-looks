@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { getVideos } from '../services/videos.js';
-import { getShows } from '../services/shows.js';
+import { getShows, getUpcomingShows } from '../services/shows.js';
 
 const UIContext = createContext();
 
@@ -9,6 +9,7 @@ const UIProvider = ({ children }) => {
   const [videos, setVideos] = useState([]);
   const [newVideo, setNewVideo] = useState('');
   const [shows, setShows] = useState([]);
+  const [upcomingShows, setUpcomingShows] = useState([]);
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -34,6 +35,18 @@ const UIProvider = ({ children }) => {
     fetchShows();
   }, []);
 
+  useEffect(() => {
+    const fetchUpcomingShows = async () => {
+      try {
+        const data = await getUpcomingShows();
+        setUpcomingShows(data);
+      } catch (e) {
+        console.error(e.message);
+      }
+    };
+    fetchUpcomingShows();
+  }, []);
+
   return (
     <UIContext.Provider
       value={{
@@ -45,6 +58,8 @@ const UIProvider = ({ children }) => {
         setVideos,
         navDisplay,
         setNavDisplay,
+        upcomingShows,
+        setUpcomingShows,
       }}
     >
       {children}
