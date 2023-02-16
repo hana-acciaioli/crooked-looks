@@ -1,13 +1,5 @@
 import { client, checkError } from './client';
 
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-
-today = yyyy + '/' + mm + '/' + dd;
-document.write(today);
-
 export async function createShow(date, city, location, link) {
   const resp = await client.from('shows').insert({ date, city, location, link });
   return checkError(resp);
@@ -23,6 +15,12 @@ export async function deleteShow({ id }) {
 }
 
 export async function getUpcomingShows() {
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  let yyyy = today.getFullYear();
+  today = yyyy + '/' + mm + '/' + dd;
+  // document.write(today);
   const resp = await client.from('shows').select('*').gte('date', today).order('date');
   return checkError(resp);
 }
