@@ -21,13 +21,22 @@ export default function VideoList() {
   return (
     <div>
       {user && <VideoForm />}
-      <div>
+      <div className="video-showcase">
         {videos.map((video) => (
           <>
-            <div key={video.id} className="video-showcase">
-              <iframe src={`${video.video_url}`} alt={video.title} allowFullScreen></iframe>
+            <div key={video.id} className="video-container">
+              <iframe
+                src={`${video.video_url}`}
+                alt={video.title}
+                allowFullScreen
+                className="iframe-container"
+              ></iframe>
             </div>
-            {user && <Button onClick={() => handleDelete(video)}>Delete</Button>}
+            {user && (
+              <Button className="delete-button" onClick={() => handleDelete(video)}>
+                Delete
+              </Button>
+            )}
           </>
         ))}
       </div>

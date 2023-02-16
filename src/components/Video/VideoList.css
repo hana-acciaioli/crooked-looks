@@ -1,11 +1,23 @@
 .video-showcase {
   background-color: transparent;
-  width: 100%;
-  color: white;
-  padding-top: 7rem;
+  padding: auto;
+  display: grid;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-self: center;
+  background-color: black;
+  border-radius: 0.25rem;
+  margin-top: 5rem;
+  font-size: 1.5em;
+}
+
+.delete-button {
   position: relative;
+  justify-self: center;
   display: flex;
-  justify-content: center;
-  margin: 0.2rem;
-  object-fit: contain;
+  width: 5rem;
+  margin: 0.2rem 15rem 0.2rem 15rem;
 }
