@@ -13,10 +13,6 @@
   top: 0;
   bottom: 0;
   z-index: -1;
-  /* -webkit-transform: translate(100%, 100%);
-  -moz-transform: translate(100%, 100%);
-  -ms-transform: translate(100%, 100%);
-  transform: translate(100%, 100%); */
 }
 .text h2 {
   font-size: 5em;
