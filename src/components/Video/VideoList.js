@@ -25,12 +25,7 @@ export default function VideoList() {
         {videos.map((video) => (
           <>
             <div key={video.id} className="video-container">
-              <iframe
-                src={`${video.video_url}`}
-                alt={video.title}
-                allowFullScreen
-                className="iframe-container"
-              ></iframe>
+              <iframe src={`${video.video_url}`} alt={video.title} allowFullScreen></iframe>
             </div>
             {user && (
               <Button className="delete-button" onClick={() => handleDelete(video)}>

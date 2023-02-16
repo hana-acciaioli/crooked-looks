@@ -2,6 +2,7 @@
   background-color: transparent;
   padding: auto;
   display: grid;
+  margin-bottom: 2em;
 }
 
 .video-container {
