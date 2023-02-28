@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+.showcase {
+  width: 100%;
+  height: 100vh;
+}
+.showcase-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: 'rebel-nation', Arial, Helvetica, sans-serif;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgb(242, 205, 252), 0 0 25px rgb(100, 16, 156), 0 0 5px rgb(1, 1, 61);
+  filter: brightness(1.25);
+}
+.text h4 {
+  font-size: 1em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  display: inline-block;
+  margin-right: 1rem;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  width: 2rem;
+}
+.social-img {
+  width: stretch;
+}
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
+  .text h3 {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.social-container {
+  display: flex;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  margin-left: 1rem;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  display: inline-block;
+  margin-right: 1rem;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  width: 2rem;
+}
+.social-img {
+  width: stretch;
+}
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
